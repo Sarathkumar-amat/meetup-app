@@ -1,10 +1,87 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.eventCard-thumbnail{
+  height: 250px;
+  width: 250px;
+  border-radius: 5px;
+  position: relative;
+}
+.meets-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.meet-card{
+  margin: 20px;
+  position: relative;
+}
+.event-type-card{
+  position:absolute;
+  top:0;
+  left:5px;
+  padding: 4px;
+  margin-top:5px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+.meet-card-title{
+  padding: 0;
+  margin: 3px;
+}
+.event-card-startDate{
+  font-size: smaller;
+  margin: 3px;
+  color: grey;
+}
+.event-detail-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  position: relative;
+  background-color: #f5f5f5;
+  
+}
+.event-info{
+  width: 400px;
+}
+.event-thumbnail{
+  width: 500px;
+}
+.fa-location-dot,.fa-indian-rupee-sign,.fa-regular{
+  justify-self: center;
+  align-self: center;
+  margin-right: 5px;
+}
+.location-time-fee{
+  padding: 10px;
+  background-color: white;
+  border-radius:10px;
+  margin: 10px;
+}
+.speaker-img{
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+}
+.speaker-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.speaker-card{
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  width: 120px;
+  font-size: small;
+  box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  text-align: center;
+}
+.speaker-name{
+  font-weight: bold;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,6 +99,52 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.rsvp-overlay{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.rsvp-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.rsvp-container{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 25px;
+}
+.rsvp-form{
+  display: flex;
+  flex-direction: column;
+}
+.rsvp-header{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.fa-xmark{
+  justify-self: flex-end;
+  align-self: flex-end;
+  cursor: pointer;
+}
+.additional-info{
+  margin: 3px;
 }
 
 .App-link {
