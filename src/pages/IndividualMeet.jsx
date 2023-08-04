@@ -18,8 +18,7 @@ export function IndividualMeet()
         const givenDate = new Date(dateString);
         return currentDate<givenDate;
     }
-    console.log(meetId);
-    console.log(event);
+    
 
     const additionalInfoKeys = (eventInfoObj)=>{
         console.log(Object.keys(eventInfoObj));
