@@ -89,6 +89,15 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@media (max-width: 767px) {
+  .meets-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
 
 .App-header {
   background-color: #282c34;
