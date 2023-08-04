@@ -41,7 +41,7 @@
   margin: 30px;
   position: relative;
   background-color: #f5f5f5;
-  
+  padding:30px;
 }
 .event-info{
   width: 400px;
@@ -112,11 +112,19 @@
   left: 0;
   right: 0;
 }
-.rsvp-button{
+.rsvp-button-container{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+}
+.rsvp-button{
+  
+  background:#f55759;
+  border:none;
+  color:white;
+  padding:5px;
+  border-radius: 5px;
 }
 .rsvp-container{
   display: flex;
@@ -150,7 +158,12 @@
 .App-link {
   color: #61dafb;
 }
-
+.meet-header{
+  font-size: large;
+  font-style: italic;
+  color: red;
+  cursor: pointer;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

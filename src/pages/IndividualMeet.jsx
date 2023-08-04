@@ -13,6 +13,11 @@ export function IndividualMeet()
     const event = meetUps?.find(({id})=>id===meetId);
     // const {additionalInformation} = event;
     // const rsvpRef = useRef();
+    const checkDateRange=(dateString)=>{
+        const currentDate = new Date();
+        const givenDate = new Date(dateString);
+        return currentDate<givenDate;
+    }
     console.log(meetId);
     console.log(event);
 
@@ -34,10 +39,11 @@ export function IndividualMeet()
         {rsvp && <RSVPModal setRsvp={setRsvp}/>}
         <div className="event-info">
             <h3>{event?.title}</h3>
-            <p>Hosted By: {event?.hostedBy}</p>
+            <p><div style={{fontWeight:"bold"}}>Hosted By:</div>
+             {event?.hostedBy}</p>
             <img className="event-thumbnail" src={event?.eventThumbnail} alt="event-thumbnail" />
-            <p>Details: {event.eventDescription}</p>
-            {event?.additionalInformation && <p><div>Additional information:</div> {
+            <p><div style={{fontWeight:"bold"}}>Details: </div>{event.eventDescription}</p>
+            {event?.additionalInformation && <p><div style={{fontWeight:"bold"}}>Additional information:</div> {
 
             additionalInfoKeys(event?.additionalInformation)?.map(element=>
                 <div style={{display:"flex"}}>
@@ -88,9 +94,9 @@ export function IndividualMeet()
                     </div>)}
                 </div>
             </div>
-            <div className="rsvp-button">
+            {checkDateRange(event?.eventEndTime) && <div className="rsvp-button-container">
                 <button onClick={()=>setRsvp(true)} className="rsvp-button">RSVP</button>
-            </div>
+            </div>}
         </div>
 
 

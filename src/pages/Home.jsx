@@ -18,11 +18,7 @@ export function Home()
     }
 
     return (<div>
-        <header>
-            Meetup
-        </header>
         <h1>Meetup Events</h1>
-        <input onChange={(e)=>setSearchText(e.target.value)} type="text" placeholder="search by tile or tags" />
         <select onChange={(e)=>setEventType(e.target.value)}>
             <option value="Both">Select event type</option>
             <option value="Online">Online</option>
